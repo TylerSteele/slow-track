@@ -1,5 +1,5 @@
 //
-//  Habit.swift
+//  Journey.swift
 //  Slow Track
 //
 //  Created by Tyler Steele on 5/20/24.
@@ -11,14 +11,18 @@ import UIKit
 import SwiftUI
 
 @Model
-final class Habit {
-    @Attribute(.unique) let id: UUID
+final class Journey {
+    @Attribute(.unique) var id: UUID
     var title: String
     var motivation: String
     var days: [Day]
     var color: AllowedColor
+    var uiColor: UIColor {
+        getUIColor(color: color)
+    }
     
-    static let `default` = Habit()
+    
+    static let `default` = Journey()
     
     init(id: UUID = UUID(), title: String = "", motivation: String = "", color: AllowedColor = AllowedColor.allCases.randomElement()!, days: [Day] = []) {
         self.id = id

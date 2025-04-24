@@ -12,7 +12,7 @@ import SwiftData
 struct Slow_TrackApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Habit.self
+            Journey.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

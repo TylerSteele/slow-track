@@ -1,5 +1,5 @@
 //
-//  HabitsList.swift
+//  JourneysList.swift
 //  Slow Track
 //
 //  Created by Tyler Steele on 5/22/24.
@@ -8,48 +8,58 @@
 import SwiftUI
 import SwiftData
 
-struct HabitsList: View {
+// TODO settle on a good toggle design 
+
+func getLabel () -> Text {
+    return Text("Check")
+}
+struct JourneysList: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var habits: [Habit]
+    @Query private var journeys: [Journey]
+    @State private var boolean: Bool = false
     var body: some View {
         List {
-            ForEach(habits) { habit in
-                NavigationLink {
-                    HabitEditor(habit: habit)
-                    Text("Habit")
-                } label: {
-                    HStack {
-                        Color(uiColor: getUIColor(color: habit.color))
-                            .cornerRadius(20)
-                            .frame(width: 30, height: 30)
-                        Text(habit.title == "" ? "New Habit" : habit.title)
+            ForEach(journeys) { journey in
+                HStack {
+                    Toggle(isOn: $boolean, label: getLabel)
+                        .toggleStyle(CheckboxToggleStyle())
+                    NavigationLink {
+                        JourneyEditor(journey: journey)
+                        Text("Journey")
+                    } label: {
+                        HStack {
+                            Color(uiColor: getUIColor(color: journey.color))
+                                .cornerRadius(20)
+                                .frame(width: 30, height: 30)
+                            Text(journey.title == "" ? "New Journey" : journey.title)
+                        }
                     }
                 }
             }
-            .onDelete(perform: deleteHabit)
+            .onDelete(perform: deleteJourney)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 EditButton()
             }
             ToolbarItem {
-                Button(action: addHabit) {
+                Button(action: addJourney) {
                     Label("Add Item", systemImage: "plus")
                 }
             }
         }
     }
-    private func addHabit() {
+    private func addJourney() {
         withAnimation {
-            let newHabit = Habit()
-            modelContext.insert(newHabit)
+            let newJourney = Journey()
+            modelContext.insert(newJourney)
         }
     }
     
-    private func deleteHabit(offsets: IndexSet) {
+    private func deleteJourney(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(habits[index])
+                modelContext.delete(journeys[index])
             }
         }
     }
@@ -57,9 +67,32 @@ struct HabitsList: View {
 
 #Preview {
     NavigationSplitView {
-        HabitsList()
+        JourneysList()
     } detail: {
         Text("Select an item")
     }
-        .modelContainer(for: [Habit.self], inMemory: true)
+        .modelContainer(for: [Journey.self], inMemory: true)
+}
+
+struct CheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+
+            RoundedRectangle(cornerRadius: 5.0)
+                .stroke(lineWidth: 2)
+                .frame(width: 25, height: 25)
+                .cornerRadius(5.0)
+                .overlay {
+                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        configuration.isOn.toggle()
+                    }
+                }
+
+            configuration.label
+
+        }
+    }
 }
