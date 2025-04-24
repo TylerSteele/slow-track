@@ -12,14 +12,14 @@ struct ContentView: View {
 
     var body: some View {
         NavigationSplitView {
-            HabitsList()
+            JourneysList()
         } detail: {
-            Text("Select a habit")
+            Text("Select a journey")
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Habit.self, inMemory: true)
+        .modelContainer(for: Journey.self, inMemory: true)
 }
