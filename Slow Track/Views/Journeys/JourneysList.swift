@@ -11,7 +11,7 @@ import SwiftData
 // TODO settle on a good toggle design 
 
 func getLabel () -> Text {
-    return Text("Check")
+    return Text("Label")
 }
 struct JourneysList: View {
     @Environment(\.modelContext) private var modelContext
@@ -91,8 +91,9 @@ struct CheckboxToggleStyle: ToggleStyle {
                     }
                 }
 
-            configuration.label
+//            configuration.label   I don't want a label. Maybe this is an accessibility concern, but the check is only temporary.
 
         }
     }
 }
+
