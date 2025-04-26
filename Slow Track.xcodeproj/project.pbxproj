@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		108811772BFB7D0C00535E37 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108811762BFB7D0C00535E37 /* Habit.swift */; };
-		10A1C7C92BFE237D00408AA2 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1C7C82BFE237D00408AA2 /* HabitsList.swift */; };
+		107EB6842DBC7B35003275A9 /* JourneyListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107EB6832DBC7B35003275A9 /* JourneyListCard.swift */; };
+		108811772BFB7D0C00535E37 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108811762BFB7D0C00535E37 /* Journey.swift */; };
+		10A1C7C92BFE237D00408AA2 /* JourneysList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1C7C82BFE237D00408AA2 /* JourneysList.swift */; };
 		10A4AE752BBE450D00C06F3B /* Slow_TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4AE742BBE450D00C06F3B /* Slow_TrackApp.swift */; };
 		10A4AE772BBE450D00C06F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4AE762BBE450D00C06F3B /* ContentView.swift */; };
 		10A4AE7B2BBE450F00C06F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A4AE7A2BBE450F00C06F3B /* Assets.xcassets */; };
@@ -16,7 +17,7 @@
 		10A4AE882BBE450F00C06F3B /* Slow_TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4AE872BBE450F00C06F3B /* Slow_TrackTests.swift */; };
 		10A4AE922BBE450F00C06F3B /* Slow_TrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4AE912BBE450F00C06F3B /* Slow_TrackUITests.swift */; };
 		10A4AE942BBE450F00C06F3B /* Slow_TrackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4AE932BBE450F00C06F3B /* Slow_TrackUITestsLaunchTests.swift */; };
-		10A72EB82C060D3E00C35FAA /* HabitEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A72EB72C060D3E00C35FAA /* HabitEditor.swift */; };
+		10A72EB82C060D3E00C35FAA /* JourneyEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A72EB72C060D3E00C35FAA /* JourneyEditor.swift */; };
 		10DB77002C07587C000E85FB /* DaysPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB76FF2C07587C000E85FB /* DaysPicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		108811762BFB7D0C00535E37 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
-		10A1C7C82BFE237D00408AA2 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
+		107EB6832DBC7B35003275A9 /* JourneyListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyListCard.swift; sourceTree = "<group>"; };
+		108811762BFB7D0C00535E37 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		10A1C7C82BFE237D00408AA2 /* JourneysList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysList.swift; sourceTree = "<group>"; };
 		10A4AE712BBE450D00C06F3B /* Slow Track.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slow Track.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A4AE742BBE450D00C06F3B /* Slow_TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slow_TrackApp.swift; sourceTree = "<group>"; };
 		10A4AE762BBE450D00C06F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		10A4AE8D2BBE450F00C06F3B /* Slow TrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slow TrackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A4AE912BBE450F00C06F3B /* Slow_TrackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slow_TrackUITests.swift; sourceTree = "<group>"; };
 		10A4AE932BBE450F00C06F3B /* Slow_TrackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slow_TrackUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		10A72EB72C060D3E00C35FAA /* HabitEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEditor.swift; sourceTree = "<group>"; };
+		10A72EB72C060D3E00C35FAA /* JourneyEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyEditor.swift; sourceTree = "<group>"; };
 		10DB76FF2C07587C000E85FB /* DaysPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,14 +137,15 @@
 			path = "Slow TrackUITests";
 			sourceTree = "<group>";
 		};
-		10A72EB62C060D2400C35FAA /* Habits */ = {
+		10A72EB62C060D2400C35FAA /* Journeys */ = {
 			isa = PBXGroup;
 			children = (
-				10A1C7C82BFE237D00408AA2 /* HabitsList.swift */,
-				10A72EB72C060D3E00C35FAA /* HabitEditor.swift */,
+				107EB6832DBC7B35003275A9 /* JourneyListCard.swift */,
+				10A1C7C82BFE237D00408AA2 /* JourneysList.swift */,
+				10A72EB72C060D3E00C35FAA /* JourneyEditor.swift */,
 				10DB76FF2C07587C000E85FB /* DaysPicker.swift */,
 			);
-			path = Habits;
+			path = Journeys;
 			sourceTree = "<group>";
 		};
 		10A72EB92C060E2900C35FAA /* Views */ = {
@@ -150,7 +153,7 @@
 			children = (
 				10A4AE742BBE450D00C06F3B /* Slow_TrackApp.swift */,
 				10A4AE762BBE450D00C06F3B /* ContentView.swift */,
-				10A72EB62C060D2400C35FAA /* Habits */,
+				10A72EB62C060D2400C35FAA /* Journeys */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +161,7 @@
 		10A72EBA2C060E2F00C35FAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				108811762BFB7D0C00535E37 /* Habit.swift */,
+				108811762BFB7D0C00535E37 /* Journey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,11 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DB77002C07587C000E85FB /* DaysPicker.swift in Sources */,
+				107EB6842DBC7B35003275A9 /* JourneyListCard.swift in Sources */,
 				10A4AE772BBE450D00C06F3B /* ContentView.swift in Sources */,
-				10A1C7C92BFE237D00408AA2 /* HabitsList.swift in Sources */,
-				108811772BFB7D0C00535E37 /* Habit.swift in Sources */,
+				10A1C7C92BFE237D00408AA2 /* JourneysList.swift in Sources */,
+				108811772BFB7D0C00535E37 /* Journey.swift in Sources */,
 				10A4AE752BBE450D00C06F3B /* Slow_TrackApp.swift in Sources */,
-				10A72EB82C060D3E00C35FAA /* HabitEditor.swift in Sources */,
+				10A72EB82C060D3E00C35FAA /* JourneyEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
