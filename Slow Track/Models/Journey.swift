@@ -15,7 +15,17 @@ final class Journey {
     @Attribute(.unique) var id: UUID
     var title: String
     var motivation: String
-    var days: [Day]
+    private var _days: [Day] = []
+    @Transient public var days: [Day] {
+        get { _days }
+        set {
+            newValue.forEach { day in
+                // TODO: Set notification
+                print("Added " + day.rawValue)
+            }
+            _days = newValue
+        }
+    }
     var color: AllowedColor
     var uiColor: UIColor {
         getUIColor(color: color)
@@ -24,12 +34,12 @@ final class Journey {
     
     static let `default` = Journey()
     
-    init(id: UUID = UUID(), title: String = "", motivation: String = "", color: AllowedColor = AllowedColor.allCases.randomElement()!, days: [Day] = []) {
+    // Because days has a getter and setter, it can't be set in the initializer. We don't set _days directly because we want the days set side effect
+    init(id: UUID = UUID(), title: String = "", motivation: String = "", color: AllowedColor = AllowedColor.allCases.randomElement()!) {
         self.id = id
         self.title = title
         self.motivation = motivation
         self.color = color
-        self.days = days
     }
 }
 
