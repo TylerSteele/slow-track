@@ -13,7 +13,7 @@ struct DaysPicker: View {
     var body: some View {
         HStack {
             ForEach(Day.allCases, id: \.self) { day in
-                Text(String(day.rawValue.prefix(2)))
+                Text(String(day.caseName.prefix(2)))
                     .bold()
                     .foregroundColor(.white)
                     .frame(width: 30, height: 30)
@@ -49,6 +49,12 @@ struct DaysPicker: View {
     return BindingViewExamplePreviewContainer()
 }
 
-enum Day: String, CaseIterable, Codable, Hashable {
-    case Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+enum Day: Int, CaseIterable, Codable, Hashable {
+    case Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+}
+
+extension Day {
+    var caseName: String {
+        return String(describing: self)
+    }
 }
